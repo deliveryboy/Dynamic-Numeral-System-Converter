@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Dynamic Numeral System Converter</title>
+
+    <script type="text/javascript" src="dnsc.js"></script>
+
+    <style type="text/css">
+        fieldset
+        {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Dynamic Numeral System Converter</h1>
+    <p>
+        Converts from and to any of the given numeral systems below (integer only).
+        <br />
+		The supported numeral systems are 
+		<a href="http://en.wikipedia.org/wiki/Binary_numeral_system">Binary</a>, 
+		<a href="http://en.wikipedia.org/wiki/Octal">Octal</a>, 
+		<a href="http://en.wikipedia.org/wiki/Decimal">Decimal</a> 
+		and <a href="http://en.wikipedia.org/wiki/Hexadecimal">Hexadecimal</a> respectively.
+    </p>
+    <form id="dnsc" action="#">
+    <fieldset>
+        <input name="bin" type="text" readonly="readonly" onfocus="focusHandler(this)" onblur="blurHandler(this)"
+            onkeydown="keyDownHandler(event)" onkeyup="keyUpHandler(this)" />
+        Binary [0-1]
+        <br />
+        <input name="oct" type="text" readonly="readonly" onfocus="focusHandler(this)" onblur="blurHandler(this)"
+            onkeydown="keyDownHandler(event)" onkeyup="keyUpHandler(this)" />
+        Octal [0-7]
+        <br />
+        <input name="dec" type="text" readonly="readonly" onfocus="focusHandler(this)" onblur="blurHandler(this)"
+            onkeydown="keyDownHandler(event)" onkeyup="keyUpHandler(this)" />
+        Decimal [0-9]
+        <br />
+        <input name="hex" type="text" readonly="readonly" onfocus="focusHandler(this)" onblur="blurHandler(this)"
+            onkeydown="keyDownHandler(event)" onkeyup="keyUpHandler(this)" />
+        Hexadecimal [0-9,A-F]
+        <br />
+        <input type="reset" />
+    </fieldset>
+    </form>
+    <h2>
+        Known bugs</h2>
+    <ul>
+        <li>It is still possible to type in some invalid characters.</li>
+        <li>If a large decimal integer will be displayed in exponential notation the non fractional part omitting the exponent will be evaluated only.</li>
+        <li>The use of numpad is not supported.</li>
+    </ul>
+    <h2>
+        Disclaimer</h2>
+    <p>
+        No guarantee for correctness.</p>
+    <hr />
+    <p>
+        Copyright © 2007-2008 by <i>Markus Kwaśnicki</i></p>
+</body>
+</html>
